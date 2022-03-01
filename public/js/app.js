@@ -1,6 +1,6 @@
 console.log('js is loading from the app.js file');
 
-fetch('/weather?address=anantapur').then((response) => {
+fetch('/weather?address=!').then((response) => {
 	response.json().then((data) => {
 		if (data.error) {
 			console.log(data.error);
@@ -11,9 +11,11 @@ fetch('/weather?address=anantapur').then((response) => {
 	});
 });
 
-// const weatherForm = document.querySelector('form');
+const weatherForm = document.querySelector('form');
+const search = document.querySelector('input');
 
-// weatherForm.addEventListener('submit', (e) => {
-// 	e.preventDefault();
-// 	console.log('testing');
-// });
+weatherForm.addEventListener('submit', (e) => {
+	e.preventDefault();
+	const location = search.value;
+	console.log('testing', location);
+});
