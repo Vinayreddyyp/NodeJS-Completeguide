@@ -1,6 +1,6 @@
 console.log('js is loading from the app.js file');
 
-fetch('http://localhost:3000/weather?address=anantapur').then((response) => {
+fetch('/weather?address=anantapur').then((response) => {
 	response.json().then((data) => {
 		if (data.error) {
 			console.log(data.error);
