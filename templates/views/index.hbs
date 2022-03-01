@@ -4,18 +4,21 @@
           <title>Weather</title>
           <link rel = 'icon' href="/img/weather.png">
         <link rel="stylesheet" href="/css/styles.css">
-        <script src="/js/app.js"></script>
+        
     
     </head>
     <body>
-        <input class="main-content">
+        <div class="main-content">
              {{>header}}
-             {{!-- <form>
+             <form>
              <p>Use this site to get your weather</p>
              <input placeholder="search city">
              <button>search</button>
-             </form>     --}}
+             <p id='message-1'></p>
+              <p id='message-2'></p>
+             </form>    
               {{>footer}}
+              <script src="/js/app.js"></script>
         </div>   
         
              
